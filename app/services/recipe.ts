@@ -6,11 +6,19 @@ export class RecipeService {
 
   readonly repository = new RecipeRepository();
 
-  async getMany() {
-    return this.repository.find();
+  async deleteOne(id: string) {
+    return this.repository.deleteOne(id);
+  }
+
+  async findMany(): Promise<IRecipe[]> {
+    return this.repository.findMany();
   }
 
   async insertOne(recipe: IRecipe) {
     return this.repository.insertOne(recipe);
+  }
+
+  async updateOne(id: string, recipe: IRecipe) {
+    return this.repository.updateOne(id, recipe);
   }
 }
