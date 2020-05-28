@@ -1,0 +1,9 @@
+{
+  "name": "deno-rest-api",
+  "scripts": {
+    "start:app": "deno run --allow-all --unstable app/index.ts",
+    "start:db": "cd db && docker-compose up -d",
+    "stop:db": "cd db && docker-compose down"
+  },
+  "license": "ISC"
+}
